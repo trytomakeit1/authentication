@@ -42,7 +42,12 @@ class App extends Component {
                 </div>
               )
             }} />
-            <Route path="/signup" component={Signup} />
+            <Route path="/signup" render={()=>
+            (<div>
+                <p style={{fontWeight: "600"}}>Enter your data to create an account</p>
+                <Signup />
+              </div>)
+            } />
         </header>
       </div>
     );

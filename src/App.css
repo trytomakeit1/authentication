@@ -38,12 +38,32 @@
   margin-bottom: 25px;
 }
 
-.form-container input, .form-container input:focus {
+.form-ctrl-withLbl {
+  display: flex;
+  justify-content: space-between;
+}
+.form-ctrl-withLbl input {
+  flex-basis: 60%;
+}
+
+.form-container .form-ctrl{
+  margin: 10px;
+}
+
+.form-container .form-ctrl label, .form-container .form-ctrl input {
   padding: 5px;
+  margin: 0px 10px;
+  font-size: 1rem;
+}
+
+.form-ctrl label {
+  font-weight: 600;
+}
+
+.form-container input, .form-container input:focus {
+  
   border: none;
   border-bottom: 1px solid #9d9a9a59;
-  margin: 10px;
-  font-size: 1rem;
   outline: 0;
 
 }
