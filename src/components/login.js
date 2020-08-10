@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component } from 'react';
+import axios from 'axios';
 
 class Login extends Component{
     constructor(){
@@ -8,9 +9,16 @@ class Login extends Component{
         this.loginSubmit = this.loginSubmit.bind(this);
     }
 
+
     loginSubmit(e){
         e.preventDefault();
-        console.log(e.target.elements.username.value);
+        let username = e.target.elements.username.value;
+        let password = e.target.elements.password.value;
+
+        axios.post("http://localhost:8080/api/login", {username, password}).then((res)=>{
+            console.log("successfully called the api");
+        });
+ 
     }
 
 
